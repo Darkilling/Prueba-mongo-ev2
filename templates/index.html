@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>libreria</title>
 </head>
-<body>
+  <body>
     <h1>Usando Mongo</h1>
     {% for resultado in libreria %}
-      <ul>
-        <li>
-            <small>Id del libro</small>
-            <label>{{resultado._id}}</label><br>
+        <ul>
+          <li>
+              <small>Id del libro</small>
+              <label>{{resultado._id}}</label><br>
 
-            <small>titulo del libro</small>
-            <label>{{resultado.titulo}}</label><br>
+              <small>titulo del libro</small>
+              <label>{{resultado.titulo}}</label><br>
 
-            <small>autor del libro</small>
-            <label>{{resultado.autor_id}}</label><br>
+              <small>autor del libro</small>
+              <label>{{resultado.autor_id}}</label><br>
 
-            <small>precio del libro</small>
-            <label>{{resultado.precio}}</label> <br>
+              <small>precio del libro</small>
+              <label>{{resultado.precio}}</label> <br>
 
-            <small>stock del libro</small>
-            <label>{{resultado.stock}}</label><br>
-        </li>
-      </ul>
-    
-</body>
+              <small>stock del libro</small>
+              <label>{{resultado.stock}}</label><br>
+          </li>
+        </ul>
+    {%endfor%}
+  </body>
 </html>
