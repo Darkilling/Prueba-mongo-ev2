@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>libreria</title>
 </head>
 <body>
+    <h1>Usando Mongo</h1>
+    {% for resultado in libreria %}
+      <ul>
+        <li>
+            <small>Id del libro</small>
+            <label>{{resultado.libros_id}}</label><br>
+
+            <small>titulo del libro</small>
+            <label>{{resultado.titulo}}</label><br>
+
+            <small>autor del libro</small>
+            <label>{{resultado.autor_id}}</label><br>
+
+            <small>precio del libro</small>
+            <label>{{resultado.precio}}</label> <br>
+
+            <small>stock del libro</small>
+            <label>{{resultado.stock}}</label><br>
+        </li>
+      </ul>
     
 </body>
 </html>

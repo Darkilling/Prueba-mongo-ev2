@@ -5,9 +5,12 @@ db = conexion()
 app = Flask(__name__)
 @app.route('/')
 
-def home():
-    evaluacion = db.evaluacion2
-    find = libros.find()
+def index():
+    return render_template('index.html')
 
-    return render_template('index.html', evaluacion = find)
+def home():
+    libreria = db.libros
+    find = libreria.find()
+
+    return render_template('index.html', libreria = find)
 
