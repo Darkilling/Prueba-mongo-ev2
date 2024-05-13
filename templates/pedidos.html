@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pedidos</title>
 </head>
 <body>
+    <h1>Mis Pedidos</h1>
+    <ul>
+        {% for resultado in pedido %}
+            <li>
+                <small>ID del cliente:</small>
+                <label>{{resultado._id }}</label><br>
+
+                <small>Numero de cliente:</small>
+                <label>{{resultado.cliente_id }}</label><br>
+
+                <small>Numero de libro:</small>
+                <label>{{resultado.libro_id }}</label><br>
+
+                <small>cantidad de libros pedidos:</small>
+                <label>{{resultado.cantidad }}</label><br>
+
+                <small>total del pedido:</small>
+                <label>{{resultado.total }}</label><br>
+            </li>
+        {% endfor %}
+    </ul>
     
 </body>
 </html>

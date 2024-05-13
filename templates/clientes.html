@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clientes</title>
 </head>
 <body>
+    <h1>Mis Clientes</h1>
+    {% for resultado in cliente %}
+        <ul>
+        
+            <li>
+                <small>id del cliente:</small>
+                <label>{{resultado._id}}</label><br>
+
+                <small>Nombre del cliente:</small>
+                <label>{{resultado.nombre}}</label><br>
+
+                <small>email del cliente:</small>
+                <label>{{resultado.email}}</label><br>
+            </li>
+        
+        </ul>
+    {% endfor %}
     
 </body>
 </html>

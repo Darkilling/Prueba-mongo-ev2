@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Libros</title>
 </head>
 <body>
-    
+    <h1>Mis libros</h1>
+    {% for resultado in libreria %}
+        <ul>
+          <li>
+              <small>Id del libro</small>
+              <label>{{resultado._id}}</label><br>
+
+              <small>titulo del libro</small>
+              <label>{{resultado.titulo}}</label><br>
+              
+              <small>autor del libro</small>
+              <label>{{resultado.autor}}</label><br>
+            
+              <small>precio del libro</small>
+              <label>{{resultado.precio}}</label> <br>
+
+              <small>stock del libro</small>
+              <label>{{resultado.stock}}</label><br>
+          </li>
+        </ul>
+    {%endfor%}
 </body>
 </html>

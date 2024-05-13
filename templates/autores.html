@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Autores </title>
 </head>
 <body>
-    
+    <h1>Mis autores</h1>
+    {% for resultado in autor %}
+        <ul>
+        
+            <li>
+                <small>ID del Autor:</small>
+                <label>{{resultado.autor_id }}</label><br>
+
+                <small>Nombre del Autor:</small>
+                <label>{{resultado.nombre }}</label><br>
+
+                <small>Nacionalidad:</small>
+                <label>{{resultado.nacionalidad }}</label><br>
+            </li>
+        
+        </ul>
+    {% endfor %}
 </body>
 </html>

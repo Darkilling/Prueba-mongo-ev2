@@ -6,26 +6,43 @@
     <title>libreria</title>
 </head>
   <body>
-    <h1>Usando Mongo</h1>
-    {% for resultado in libreria %}
-        <ul>
-          <li>
-              <small>Id del libro</small>
-              <label>{{resultado._id}}</label><br>
+    <h1>Resumen Libreria</h1>
+    <h2>Libros</h2>
+    {% for libro in libros %}
+     <small>titulo del libro</small>
+     <label>{{resultado.titulo}}</label><br><!-- Aquí puedes mostrar los datos de cada libro como quieras -->
+    {% endfor %}
 
-              <small>titulo del libro</small>
-              <label>{{resultado.titulo}}</label><br>
+    <h2>Autores</h2>
+    {% for autor in autores %}
+     <small>Nombre del Autor:</small>
+     <label>{{resultado.nombre }}</label><br> <!-- Aquí puedes mostrar los datos de cada autor como quieras -->
+    {% endfor %}
 
-              <small>autor del libro</small>
-              <label>{{resultado.autor_id}}</label><br>
+    <h2>Clientes</h2>
+    {% for cliente in clientes %}
+     <small>Nombre del cliente:</small>
+     <label>{{resultado.nombre}}</label><br> <!-- Aquí puedes mostrar los datos de cada cliente como quieras -->
+    {% endfor %}
 
-              <small>precio del libro</small>
-              <label>{{resultado.precio}}</label> <br>
+    <h2>Pedidos</h2>
+    {% for pedido in pedidos %}
+      <small>cantidad de libros pedidos:</small>
+      <label>{{resultado.cantidad }}</label><br>
 
-              <small>stock del libro</small>
-              <label>{{resultado.stock}}</label><br>
-          </li>
-        </ul>
-    {%endfor%}
+      <small>total del pedido:</small>
+      <label>{{resultado.total }}</label><br> <!-- Aquí puedes mostrar los datos de cada pedido como quieras -->
+    {% endfor %}
+
+    <h2>Navegación</h2>
+    <ul>
+        <li><a href="/libros">Ver libros</a></li>
+        <li><a href="/autores">Ver autores</a></li>
+        <li><a href="/clientes">Ver Clientes</a></li>
+        <li><a href="/pedidos">Ver Pedidos</a></li>
+        <!-- Aquí puedes agregar más enlaces a otras rutas como quieras -->
+    </ul>
+</body>
+</html>
   </body>
 </html>
