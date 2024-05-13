@@ -8,25 +8,25 @@
   <body>
     <h1>Resumen Libreria</h1>
     <h2>Libros</h2>
-    {% for libro in libros %}
+    {% for resultado in libros %}
      <small>titulo del libro</small>
      <label>{{resultado.titulo}}</label><br><!-- Aquí puedes mostrar los datos de cada libro como quieras -->
     {% endfor %}
 
     <h2>Autores</h2>
-    {% for autor in autores %}
+    {% for resultado in autor %}
      <small>Nombre del Autor:</small>
      <label>{{resultado.nombre }}</label><br> <!-- Aquí puedes mostrar los datos de cada autor como quieras -->
     {% endfor %}
 
     <h2>Clientes</h2>
-    {% for cliente in clientes %}
+    {% for resultado in cliente %}
      <small>Nombre del cliente:</small>
      <label>{{resultado.nombre}}</label><br> <!-- Aquí puedes mostrar los datos de cada cliente como quieras -->
     {% endfor %}
 
     <h2>Pedidos</h2>
-    {% for pedido in pedidos %}
+    {% for resultado in pedido  %}
       <small>cantidad de libros pedidos:</small>
       <label>{{resultado.cantidad }}</label><br>
 
