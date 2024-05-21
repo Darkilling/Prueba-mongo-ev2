@@ -1,9 +1,11 @@
 from flask import *
 from conectar import *
 
+
+
 db = conexion()
 app = Flask(__name__)
-@app.route('/')
+
 
 @app.route('/')
 def mostrar_datos():
@@ -45,6 +47,21 @@ def pedidos():
     find = pedido.find()
 
     return render_template('pedidos.html', pedido = find)
+
+
+@app.route('/buscar', methods=['GET','POST'])
+def buscar():
+    if request.method == 'POST':
+        id = request.form.get('_id')
+        if id:
+            buscar = Buscar(id)
+            libros = buscar.buscar()
+
+            return render_template('index.html', datos = [])
+        else:
+            return render_template('index.html', datos = [])
+    else:
+        return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

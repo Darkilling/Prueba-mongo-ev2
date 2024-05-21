@@ -1,11 +1,13 @@
 from conectar import conexion
+from flask import request
+
 
 def insertar_autor():
     db = conexion()
     coleccion = db.autores
 
-    nombre = input("Ingrese el nombre del autor: ")
-    nacionalidad = input("Ingrese la nacionalidad del autor: ")
+    nombre = request.form.get('nombre')
+    nacionalidad = request.form.get('nacionalidad')
 
     nuevo_documento = {
         "nombre": nombre,
