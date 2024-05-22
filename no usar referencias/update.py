@@ -1,4 +1,4 @@
-from conectar import conexion
+'''from conectar import conexion
 
 def modificar_libro():
     id_libro = input("Ingrese el ID del libro para cambiar: ")
@@ -17,4 +17,4 @@ def modificar_libro():
         print("Error al cambiar los datos del libro:", e)
 
 if __name__ == "__main__":
-    modificar_libro()
+    modificar_libro()'''

@@ -1,4 +1,4 @@
-from conectar import conexion
+'''from conectar import conexion
 from flask import request
 
 
@@ -29,3 +29,5 @@ def eliminar_cliente(id):
 
     resultado = coleccion.delete_one({"_id": id})
     return resultado.deleted_count
+'''
+

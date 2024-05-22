@@ -7,6 +7,47 @@
 </head>
 <body>
     <h1>Mis libros</h1>
+    <h3><a href="/">Volver</a></h3>
+
+    <h2>Insertar libro</h2>
+    <form action="/insertar_libro" method="post">
+            <label for="id">ID del libro:</label><br>
+            <input type="text" id="id" name="id"><br>
+            <label for="titulo">Título del libro:</label><br>
+            <input type="text" id="titulo" name="titulo"><br>
+            <label for="autor">ID del Autor:</label><br>
+            <input type="text" id="autor_id" name="autor_id"><br>
+            <label for="precio">Precio del libro:</label><br>
+            <input type="text" id="precio" name="precio"><br>
+            <label for="stock">Stock:</label><br>
+            <input type="text" id="stock" name="stock"><br>
+            <input type="submit" value="Insertar">
+        </form>
+
+    <h2>Eliminar un libro</h2>
+    <form action="/delete_libro" method="post">
+        <label for="id">ID del libro:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <input type="submit" value="Eliminar libro">
+    </form>
+
+
+    <h2>Actualizar un libro</h2>
+    <form action="/update_libro" method="post">
+        <label for="id">ID del libro:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="nombre">Titulo del libro:</label><br>
+        <input type="text" id="titulo" name="titulo"><br>
+        <label for="email">ID del Autor:</label><br>
+        <input type="text" id="autor" name="autor"><br>
+        <label for="nombre">Precio:</label><br>
+        <input type="text" id="precio" name="precio"><br>
+        <label for="email">Stock:</label><br>
+        <input type="text" id="stock" name="stock"><br>
+        <input type="submit" value="Actualizar libro">
+    </form>
+
+
     {% for resultado in libreria %}
         <ul>
           <li>

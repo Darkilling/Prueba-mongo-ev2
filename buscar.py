@@ -1,5 +1,7 @@
 from bson import json_util, ObjectId
 from conectar import *
+from flask import request
+from index import app
 
 class Buscar():
 

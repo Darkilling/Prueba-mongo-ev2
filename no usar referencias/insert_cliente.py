@@ -1,7 +1,5 @@
-from conectar import conexion
+'''from conectar import conexion
 from flask import *
-
-app = Flask(__name__)
 
 def insertar_cliente():
     db = conexion()
@@ -20,4 +18,4 @@ def insertar_cliente():
     resultado = coleccion.insert_one(nuevo_documento)
 
     print("El id del nuevo cliente es:", resultado.inserted_id)
-    return render_template('clientes.html')
+    return render_template('clientes.html')'''

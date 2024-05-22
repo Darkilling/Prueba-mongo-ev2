@@ -6,24 +6,64 @@
     <title>Pedidos</title>
 </head>
 <body>
+    <h2>Agregar un nuevo pedido</h2>
+    <form action="/insertar_pedido" method="post">
+        <label for="id">ingresa ID del pedido:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="id">ingresa ID del cliente que pedira:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="nombre">ingresa id del libro a pedir :</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="email">ingresa la cantidad:</label><br>
+        <input type="text" id="cantidad" name="cantidad"><br>
+        <label for="email">ingresa el total:</label><br>
+        <input type="text" id="total" name="total"><br>
+        <input type="submit" value="Comfirmar">
+    </form>
+
+    <h2>Eliminar un pedido</h2>
+    <form action="/delete_pedido" method="post">
+        <label for="id">ID del pedido:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <input type="submit" value="Eliminar pedido">
+    </form>
+
+
+    <h2>Actualizar un pedido</h2>
+    <form action="/update_pedido" method="post">
+        <label for="id">ID del pedido:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="nombre">ID del cliente:</label><br>
+        <input type="text" id="cliente" name="cliente"><br>
+        <label for="email">ID del libro:</label><br>
+        <input type="text" id="libro" name="libro"><br>
+        <label for="nombre">Cantidad a comprar:</label><br>
+        <input type="text" id="cantidad" name="cantidad"><br>
+        <label for="email">Total:</label><br>
+        <input type="text" id="total" name="total"><br>
+        <input type="submit" value="Actualizar pedido">
+    </form>
+
+
     <h1>Mis Pedidos</h1>
     <ul>
+        <h3><a href="/">Volver</a></h3>
         {% for resultado in pedido %}
             <li>
+                <small>ID del pedido:</small>
+                <label>{{resultado._id}}</label><br>
+
                 <small>ID del cliente:</small>
-                <label>{{resultado._id }}</label><br>
+                <label>{{resultado.cliente_id}}</label><br>
 
-                <small>Numero de cliente:</small>
-                <label>{{resultado.cliente_id }}</label><br>
-
-                <small>Numero de libro:</small>
-                <label>{{resultado.libro_id }}</label><br>
+                <small>ID de libro:</small>
+                <label>{{resultado.libro_id}}</label><br>
 
                 <small>cantidad de libros pedidos:</small>
-                <label>{{resultado.cantidad }}</label><br>
+                <label>{{resultado.cantidad}}</label><br>
 
                 <small>total del pedido:</small>
-                <label>{{resultado.total }}</label><br>
+                <label>{{resultado.total}}</label><br>
             </li>
         {% endfor %}
         <h3><a href="/">Volver</a></h3>

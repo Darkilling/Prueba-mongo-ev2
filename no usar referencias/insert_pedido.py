@@ -1,4 +1,4 @@
-from conectar import conexion
+'''from conectar import conexion
 
 def insertar_pedido():
     db = conexion()
@@ -18,4 +18,4 @@ def insertar_pedido():
 
     resultado = coleccion.insert_one(nuevo_documento)
 
-    print("El ID del nuevo pedido es:", resultado.inserted_id)
+    print("El ID del nuevo pedido es:", resultado.inserted_id)'''

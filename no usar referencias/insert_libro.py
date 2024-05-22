@@ -1,5 +1,7 @@
-from conectar import conexion
-from flask import request, render_template
+'''from conectar import conexion
+from flask import Flask ,request, render_template
+
+app = Flask(__name__)
 
 def insertar_libro():
     db = conexion()
@@ -7,7 +9,7 @@ def insertar_libro():
 
     id= request.form.get('id')
     titulo = request.form.get('titulo')
-    autor = request.form.get('autor')
+    autor = request.form.get('autor_id')
     precio = float(request.form.get('precio'))
     stock = int(request.form.get('stock'))
 
@@ -22,4 +24,4 @@ def insertar_libro():
     resultado = coleccion.insert_one(nuevo_documento)
 
     print("El id del nuevo libro es:", resultado.inserted_id)
-    return render_template('insert_libro.html')
+    return render_template('insert_libro.html')'''

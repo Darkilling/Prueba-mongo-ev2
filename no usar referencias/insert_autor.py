@@ -1,6 +1,6 @@
-from conectar import conexion
+'''from conectar import conexion
 from flask import request
-
+from index import app
 
 def insertar_autor():
     db = conexion()
@@ -16,4 +16,4 @@ def insertar_autor():
 
     resultado = coleccion.insert_one(nuevo_documento)
 
-    print("El id del nuevo autor es:", resultado.inserted_id)
+    print("El id del nuevo autor es:", resultado.inserted_id)'''

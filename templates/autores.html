@@ -6,6 +6,35 @@
     <title>Autores </title>
 </head>
 <body>
+    <h2>Agregar un nuevo autor</h2>
+    <form action="/insertar_autor" method="post">
+        <label for="id">ingresa ID:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="nombre">Nombre del autor:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="email">ingresa Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <input type="submit" value="Comfirmar">
+    </form>
+
+    <h2>Eliminar un autor</h2>
+    <form action="/delete_cliente" method="post">
+        <label for="id">ID del Cliente:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <input type="submit" value="Eliminar Autor">
+    </form>
+
+    <h2>Actualizar un autor</h2>
+    <form action="/update_cliente" method="post">
+        <label for="id">ID del autor:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="nombre">Nombre del autor:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="email">Nacionalidad:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <input type="submit" value="Actualizar Autor">
+    </form>
+
     <h1>Mis autores</h1>
     <h3><a href="/">Volver</a></h3>
     {% for resultado in autor %}
@@ -13,13 +42,13 @@
         
             <li>
                 <small>ID del Autor:</small>
-                <label>{{resultado.autor_id }}</label><br>
+                <label>{{resultado.autor_id}}</label><br>
 
                 <small>Nombre del Autor:</small>
-                <label>{{resultado.nombre }}</label><br>
+                <label>{{resultado.nombre}}</label><br>
 
                 <small>Nacionalidad:</small>
-                <label>{{resultado.nacionalidad }}</label><br>
+                <label>{{resultado.nacionalidad}}</label><br>
             </li>
         
         </ul>
